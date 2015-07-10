@@ -9,7 +9,7 @@ The guide on how to keep your dotfiles in sync.
 If've haven't yet clones this repository, fire up your terminal and clone this repository to your environment.
 
 ```bash
-git clone git@github.com:vinkla/dotfiles.git
+git clone git@github.com:autovoid/dotfiles.git
 ```
 
 Whenever there are new updates, try to stay in sync and pull them down.
@@ -55,7 +55,8 @@ ssh-keygen -t rsa -C "your_email@example.com"
 Clone this respoitory and install dotfiles.
 
 ```bash
-git clone git@github.com:vinkla/dotfiles.git
+git clone git@github.com:autovoid/dotfiles.git
+
 source bootstrap.sh
 ```
 
