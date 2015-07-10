@@ -2,9 +2,6 @@
 alias ..="cd .."
 alias ...="cd ../.."
 
-# Better GitHub integration
-alias git="hub"
-
 # Shortcuts
 alias g="git"
 alias h="history"
