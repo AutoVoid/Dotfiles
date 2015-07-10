@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade --all
+
+# Add more version of binaries
+brew tap homebrew/versions
+
+# Install other useful binaries
+brew install git
+brew install hub
+brew install node
+brew install rename
+brew install ssh-copy-id
+brew install wget
+
+# Remove outdated versions from the cellar
+brew cleanup
+
+# Check if the system is ready to brew
+brew doctor

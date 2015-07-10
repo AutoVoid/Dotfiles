@@ -1,0 +1,72 @@
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Better GitHub integration
+alias git="hub"
+
+# Shortcuts
+alias g="git"
+alias h="history"
+
+# NPM Aliases
+alias bower="./node_modules/.bin/bower 2> /dev/null"
+alias gulp="./node_modules/.bin/gulp 2> /dev/null"
+
+# List all files in long format, including dotfiles
+alias l="ls -Glah"
+
+# Enable aliases to be sudo’ed
+alias sudo="sudo "
+
+# Copy public SSH key to clipboard
+alias copyssh="pbcopy < ~/.ssh/id_rsa.pub"
+
+# Load the iphone simulator
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+# Enhance dig
+alias dig="dig +nostats +nocomments +nocmd"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Get week number
+alias week="date +%V"
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "${@}" && cd "${_}";
+}
+
+# Start a PHP server from a directory, optionally specifying the port
+# (Requires PHP 5.4.0+.)
+function serve() {
+	local port="${1:-4000}";
+	sleep 1 && open "http://localhost:${port}/" & php -S "localhost:${port}";
+}
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+	if [ $# -eq 0 ]; then
+		subl .;
+	else
+		subl "$@";
+	fi
+}
+
+# `o` with no arguments opens current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .;
+	else
+		open "$@";
+	fi
+}
